@@ -2,16 +2,36 @@ function $(id) {
     return document.getElementById(id);
 }
 
-document.getElementById("com-texto").style.display = "none";
-document.getElementById("sem-texto").style.display = "block";
+function limpar() {
+    $('saida-texto').innerHTML = "";
+    $('entrada-texto').value = "";
+    $('entrada-texto').focus();
+}
 
-$('entrada-texto').addEventListener('click', function () {
-    const comTexto = document.getElementById('com-texto');
-    const semTexto = document.getElementById('sem-texto');
+$('com-texto').style.display = "none";
+$('sem-texto').style.display = "block";
+$('entrada-texto').addEventListener('click', function() {
+    const comTexto = $('com-texto');
+    const semTexto = $('sem-texto');
     if (comTexto.style.display === 'none' && semTexto.style.display == 'block') {
         comTexto.style.display = 'block';
         semTexto.style.display = 'none';
     }
+});
+
+$('entrada-texto').addEventListener('input', function() {
+    const regex = /[a-z\s+]/;
+    let caracter = this.value.charAt(this.value.length - 1);
+    let resultado = regex.exec(caracter);
+    if(resultado !== null) {
+        this.value = this.value;
+    } else {
+        this.value = this.value.replace(this.value.charAt(this.value.length - 1), "");
+    }
+});
+
+$('entrada-texto').addEventListener('keyup', function() {
+    this.value = this.value.toLowerCase();
 });
 
 function codificar(frase) {
@@ -34,17 +54,18 @@ function decodificar(frase) {
 }
 
 function receberFraseCriptografar() {
-    const frase = document.getElementById('entrada-texto').value;
-    document.getElementById('saida-texto').innerHTML = codificar(frase.toLowerCase());
+    const frase = $('entrada-texto').value;
+    $('saida-texto').innerHTML = codificar(frase);
 }
 
 function receberFraseDescriptografar() {
-    const frase = document.getElementById('entrada-texto').value;
-    document.getElementById('saida-texto').innerHTML = decodificar(frase.toLowerCase());
+    const frase = $('entrada-texto').value;
+    $('saida-texto').innerHTML = decodificar(frase);
 }
 
 function copiarFrase() {
-    const frase = document.getElementById('saida-texto');
+    const frase = $('saida-texto');
     frase.select();
     navigator.clipboard.writeText(frase.value);
+    limpar();
 }
