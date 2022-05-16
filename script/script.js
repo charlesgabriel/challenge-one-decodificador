@@ -2,30 +2,22 @@ function $(id) {
     return document.getElementById(id);
 }
 
-function iniciarTela() {
-    $('com-texto').style.display = "none";
-    $('com-imagem').style.display = "block";
+function mostrarImagem() {
+    $('com-texto').classList.add('esconder-elemento');
+    $('com-imagem').classList.remove('esconder-elemento');
 }
-iniciarTela();
+mostrarImagem();
 
-function alternarTelas() {
-    if(
-        $('com-texto').style.display === 'none' &&
-        $('com-imagem').style.display == 'block'
-    ) {
-        $('com-texto').style.display = 'block';
-        $('com-imagem').style.display = 'none';
-    } else {
-        $('com-texto').style.display = 'none';
-        $('com-imagem').style.display = 'block';
-    }
+function esconderImagem() {
+    $('com-texto').classList.remove('esconder-elemento');
+    $('com-imagem').classList.add('esconder-elemento');
 }
 
 function limpar() {
     $('saida-texto').innerHTML = "";
     $('entrada-texto').value = "";
     $('entrada-texto').focus();
-    alternarTelas();
+    mostrarImagem();
 }
 
 $('entrada-texto').addEventListener('input', function() {
@@ -64,14 +56,18 @@ function decodificar(frase) {
 
 function receberFraseCriptografar() {
     const frase = $('entrada-texto').value;
-    $('saida-texto').innerHTML = codificar(frase);
-    alternarTelas();
+    if(frase != "") {
+        $('saida-texto').innerHTML = codificar(frase);
+        esconderImagem();
+    }
 }
 
 function receberFraseDescriptografar() {
     const frase = $('entrada-texto').value;
-    $('saida-texto').innerHTML = decodificar(frase);
-    alternarTelas();
+    if(frase != "") {
+        $('saida-texto').innerHTML = decodificar(frase);
+        esconderImagem();
+    }
 }
 
 function copiarFrase() {
