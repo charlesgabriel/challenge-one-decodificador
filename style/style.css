@@ -39,7 +39,11 @@ article {
     height: 100%;
     border: none;
     resize: none;
+    outline: none;
     padding: 2px;
+}
+.entrada-texto::placeholder {
+    padding: 20% 0;
 }
 .caixa-aviso {
     display: flex;
@@ -65,8 +69,11 @@ article {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+
     color: #FFFFFF;
     background: #0A3871;
+    border: 1px solid #0A3871;
+
     width: 328px;
     height: 67px;
     border-radius: 24px;
@@ -79,13 +86,13 @@ article {
     font-size: 16px;
     line-height: 19px;
     text-align: center;
+
     color: #0A3871;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
     
     width: 328px;
     height: 67px;
-    
-    background: #D8DFE8;
-    border: 1px solid #0A3871;
     border-radius: 24px;
 }
 .botao-descript:hover {
@@ -148,6 +155,7 @@ article {
     max-width: 336px;
     border: none;
     resize: none;
+    outline: none;
     margin-bottom: 32px;
     word-break: break-word;
 }

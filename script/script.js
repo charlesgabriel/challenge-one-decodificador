@@ -2,25 +2,34 @@ function $(id) {
     return document.getElementById(id);
 }
 
+function iniciarTela() {
+    $('com-texto').style.display = "none";
+    $('com-imagem').style.display = "block";
+}
+iniciarTela();
+
+function alternarTelas() {
+    if(
+        $('com-texto').style.display === 'none' &&
+        $('com-imagem').style.display == 'block'
+    ) {
+        $('com-texto').style.display = 'block';
+        $('com-imagem').style.display = 'none';
+    } else {
+        $('com-texto').style.display = 'none';
+        $('com-imagem').style.display = 'block';
+    }
+}
+
 function limpar() {
     $('saida-texto').innerHTML = "";
     $('entrada-texto').value = "";
     $('entrada-texto').focus();
+    alternarTelas();
 }
 
-$('com-texto').style.display = "none";
-$('sem-texto').style.display = "block";
-$('entrada-texto').addEventListener('click', function() {
-    const comTexto = $('com-texto');
-    const semTexto = $('sem-texto');
-    if (comTexto.style.display === 'none' && semTexto.style.display == 'block') {
-        comTexto.style.display = 'block';
-        semTexto.style.display = 'none';
-    }
-});
-
 $('entrada-texto').addEventListener('input', function() {
-    const regex = /[a-z\s+]/;
+    const regex = /[a-zA-Z\s+]/;
     let caracter = this.value.charAt(this.value.length - 1);
     let resultado = regex.exec(caracter);
     if(resultado !== null) {
@@ -56,11 +65,13 @@ function decodificar(frase) {
 function receberFraseCriptografar() {
     const frase = $('entrada-texto').value;
     $('saida-texto').innerHTML = codificar(frase);
+    alternarTelas();
 }
 
 function receberFraseDescriptografar() {
     const frase = $('entrada-texto').value;
     $('saida-texto').innerHTML = decodificar(frase);
+    alternarTelas();
 }
 
 function copiarFrase() {
