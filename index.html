@@ -1,65 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Challenge Oracle ONE + Alura</title>
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/style.css">
+  <meta charset="UTF-8">
+  <title>Challenge Oracle ONE + Alura</title>
+  <link rel="stylesheet" href="./style/reset.css">
+  <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <section class="conteudo">
+  <main class="conteudo">
 
-        <article class="cabecalho">
-            <div id="logo">
-                <img src="./images/logo-alura.svg" alt="Logo da Alura"/>
-            </div>
-        </article>
-        
-        <article class="bloco-esquerdo">
-            <textarea class="entrada-texto" name="entrada-texto" id="entrada-texto" placeholder="Digite seu texto aqui..." cols="30" rows="10"></textarea>
-            
-            <div>
-                <div class="caixa-aviso">
-                    <img class="aviso-logo" src="./images/logo-aviso.svg" alt="Logo de aviso">
-                    <p class="aviso-texto">Apenas letras minúsculas e sem acento</p>
-                </div>
-    
-                <div class="caixa-botoes">
-                    <button class="botao-cript" onclick="receberFraseCriptografar()">Criptografia</button>
-                    <button class="botao-descript" onclick="receberFraseDescriptografar()">Descriptografia</button>
-                </div>
+    <div class="cabecalho divisoes">
+      <div id="logo">
+        <img src="./images/logo-alura.svg" alt="Logo da Alura" />
+      </div>
+    </div>
 
-            </div>
+    <div class="bloco-esquerdo divisoes">
+      <textarea class="entrada-texto" name="entrada-texto" id="entrada-texto" placeholder="Digite seu texto aqui..." cols="30" rows="10"></textarea>
 
-        </article>
+      <div>
+        <div class="caixa-aviso">
+          <img class="aviso-logo" src="./images/logo-aviso.svg" alt="Logo de aviso">
+          <p class="aviso-texto">Apenas letras minúsculas e sem acento</p>
+        </div>
 
-        <article class="bloco-direito">
+        <div class="caixa-botoes">
+          <button class="botao-cript" onclick="receberFraseCriptografar()">Criptografia</button>
+          <button class="botao-descript" onclick="receberFraseDescriptografar()">Descriptografia</button>
+        </div>
 
-            <div class="retangulo">
+      </div>
 
-                <div id="com-imagem">
-                    <img class="logo-nao-encontrado" src="./images/logo-nao-encontrado.svg">
-                    <div class="caixa-alerta">
-                        <p class="nota">Nenhuma mensagem encontrada</p>
-                        <p class="descricao">Digite um texto que você deseja criptografar ou descriptografar</p>
-                    </div>
-                </div>
+    </div>
 
-                <div id="com-texto">
-                    <textarea class="saida-texto" name="saida-texto" id="saida-texto" cols="30" rows="10" readonly></textarea>
-                    <button class="botao-copiar" onclick="copiarFrase()">Copiar</button>
-                </div>
-            </div>
-        </article>
+    <div class="bloco-direito divisoes">
+      <div class="retangulo">
+        <div id="com-imagem">
+          <img class="logo-nao-encontrado" src="./images/logo-nao-encontrado.svg" alt="Jovem com um lupa na mão procurando algo">
+          <div class="caixa-alerta">
+            <p class="nota">Nenhuma mensagem encontrada</p>
+            <p class="descricao">Digite um texto que você deseja criptografar ou descriptografar</p>
+          </div>
+        </div>
 
-    </section>
-    <footer class="rodape">
-        <ul>
-            <li><a href="https://www.linkedin.com/in/charles-gabriel-leandro-do-carmo-617b0078/" alt="LinkedIn"><img src="./images/icons8-linkedin.svg"></a></li>
-            <li><a href="https://github.com/charlesgabriel/" alt="GitHub"><img src="./images/icons8-github.svg"></a></li>
-            <li>Charles Gabriel L Carmo - 2022 &copy;</li>
-        </ul>
-    </footer>
-    <script src="./script/script.js"></script>
+        <div id="com-texto">
+          <textarea class="saida-texto" name="saida-texto" id="saida-texto" cols="30" rows="10" readonly></textarea>
+          <button class="botao-copiar" onclick="copiarFrase()">Copiar</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="rodape">
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/charles-gabriel-leandro-do-carmo-617b0078/">
+          <img src="./images/icons8-linkedin.svg" alt="Ícone do LinkedIn">
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/charlesgabriel/">
+          <img src="./images/icons8-github.svg" alt="Ícone do GitHub">
+        </a>
+      </li>
+      <li>
+        Charles Gabriel L Carmo - 2022 &copy;
+      </li>
+    </ul>
+  </footer>
+  <script src="./script/script.js"></script>
 </body>
 </html>
