@@ -31,15 +31,6 @@ $('entrada-texto').addEventListener('keyup', function() {
     this.value = this.value.toLowerCase();
 });
 
-function codificar(frase) {
-    const novaFrase = frase
-        .replace(/[\be\b]/g, 'enter')
-        .replace(/[\bi\b]/g, 'imes')
-        .replace(/[\ba\b]/g, 'ai')
-        .replace(/[\bo\b]/g, 'ober')
-        .replace(/[\bu\b]/g, 'ufat');
-    return novaFrase;
-}
 function decodificar(frase) {
     const novaFrase = frase
         .replace(/ufat/g, 'u')
@@ -48,14 +39,6 @@ function decodificar(frase) {
         .replace(/imes/g, 'i')
         .replace(/enter/g, 'e');
     return novaFrase;
-}
-
-function receberFraseCriptografar() {
-    const frase = $('entrada-texto').value;
-    if(frase != "") {
-        $('saida-texto').innerHTML = codificar(frase);
-        esconderImagem();
-    }
 }
 
 function receberFraseDescriptografar() {
