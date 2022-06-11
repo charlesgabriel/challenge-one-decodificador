@@ -31,24 +31,6 @@ $('entrada-texto').addEventListener('keyup', function() {
     this.value = this.value.toLowerCase();
 });
 
-function decodificar(frase) {
-    const novaFrase = frase
-        .replace(/ufat/g, 'u')
-        .replace(/ober/g, 'o')
-        .replace(/ai/g, 'a')
-        .replace(/imes/g, 'i')
-        .replace(/enter/g, 'e');
-    return novaFrase;
-}
-
-function receberFraseDescriptografar() {
-    const frase = $('entrada-texto').value;
-    if(frase != "") {
-        $('saida-texto').innerHTML = decodificar(frase);
-        esconderImagem();
-    }
-}
-
 function copiarFrase() {
     const frase = $('saida-texto');
     frase.select();
