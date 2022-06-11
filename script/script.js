@@ -12,10 +12,3 @@ $('entrada-texto').addEventListener('input', function() {
 $('entrada-texto').addEventListener('keyup', function() {
     this.value = this.value.toLowerCase();
 });
-
-function copiarFrase() {
-    const frase = $('saida-texto');
-    frase.select();
-    navigator.clipboard.writeText(frase.value);
-    limpar();
-}
