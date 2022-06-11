@@ -1,7 +1,3 @@
-function $(id) {
-    return document.getElementById(id);
-}
-
 function mostrarImagem() {
     $('com-texto').classList.add('esconder-elemento');
     $('com-imagem').classList.remove('esconder-elemento');
