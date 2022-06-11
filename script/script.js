@@ -1,11 +1,3 @@
-
-function limpar() {
-    $('saida-texto').innerHTML = "";
-    $('entrada-texto').value = "";
-    $('entrada-texto').focus();
-    mostrarImagem();
-}
-
 $('entrada-texto').addEventListener('input', function() {
     const regex = /[a-zA-Z\s+]/;
     let caracter = this.value.charAt(this.value.length - 1);
