@@ -1,3 +1,7 @@
+import { $ } from './buscarPorId.js';
+import { descriptografar } from './descriptografar.js';
+import { esconderImagem } from './campoimagem.js';
+
 function receberFraseDescriptografar() {
     const frase = $('entrada-texto').value;
     if(frase != "") {
@@ -6,6 +10,6 @@ function receberFraseDescriptografar() {
     }
 }
 
-function botaoDescriptografar() {
+export function botaoDescriptografar() {
     receberFraseDescriptografar();
 }

@@ -1,3 +1,7 @@
+import { $ } from './buscarPorId.js';
+import { criptografar } from './criptografar.js';
+import { esconderImagem } from './campoimagem.js';
+
 function receberFraseCriptografar() {
     const frase = $('entrada-texto').value;
     if(frase != "") {
@@ -6,6 +10,6 @@ function receberFraseCriptografar() {
     }
 }
 
-function botaoCriptografar() {
+export function botaoCriptografar() {
     receberFraseCriptografar();
 }

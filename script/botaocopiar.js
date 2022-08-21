@@ -1,3 +1,6 @@
+import { $ } from './buscarPorId.js';
+import { limpar } from './limpar.js';
+
 function copiarFrase() {
     const frase = $('saida-texto');
     frase.select();
@@ -5,6 +8,6 @@ function copiarFrase() {
     limpar();
 }
 
-function botaoCopiar() {
+export function botaoCopiar() {
     copiarFrase();
 }

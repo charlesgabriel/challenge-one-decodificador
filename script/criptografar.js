@@ -1,4 +1,4 @@
-function criptografar(frase) {
+export function criptografar(frase) {
     const novaFrase = frase
         .replace(/[\be\b]/g, 'enter')
         .replace(/[\bi\b]/g, 'imes')

@@ -1,4 +1,4 @@
-function descriptografar(frase) {
+export function descriptografar(frase) {
     const novaFrase = frase
         .replace(/ufat/g, 'u')
         .replace(/ober/g, 'o')

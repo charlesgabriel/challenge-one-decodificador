@@ -25,8 +25,8 @@
         </div>
 
         <div class="caixa-botoes">
-          <button class="botao-cript" onclick="botaoCriptografar()">Criptografia</button>
-          <button class="botao-descript" onclick="botaoDescriptografar()">Descriptografia</button>
+          <button class="botao-cript" data-botao-cripto>Criptografia</button>
+          <button class="botao-descript" data-botao-descripto>Descriptografia</button>
         </div>
 
       </div>
@@ -45,7 +45,7 @@
 
         <div id="com-texto">
           <textarea class="saida-texto" name="saida-texto" id="saida-texto" cols="30" rows="10" readonly></textarea>
-          <button class="botao-copiar" onclick="botaoCopiar()">Copiar</button>
+          <button class="botao-copiar" data-botao-copiar>Copiar</button>
         </div>
       </div>
     </div>
@@ -68,14 +68,7 @@
       </li>
     </ul>
   </footer>
-  <script src="./script/buscar.js"></script>
-  <script src="./script/limpar.js"></script>
-  <script src="./script/botaocopiar.js"></script>
-  <script src="./script/campoimagem.js"></script>
-  <script src="./script/criptografar.js"></script>
-  <script src="./script/descriptografar.js"></script>
-  <script src="./script/botaocriptografar.js"></script>
-  <script src="./script/botaodescriptografar.js"></script>
-  <script src="./script/escutarteclas.js"></script>
+  
+  <script src="./script/main.js" type="module"></script>
 </body>
 </html>
