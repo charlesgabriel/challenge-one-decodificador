@@ -1,8 +1,9 @@
-import { $ } from './buscarPorId.js';
+import { $ } from './buscaSeletor.js';
 import { limpar } from './limpar.js';
+import { textoSaida } from './textoSaida.js';
 
 function copiarFrase() {
-    const frase = $('saida-texto');
+    const frase = $(textoSaida);
     frase.select();
     navigator.clipboard.writeText(frase.value);
     limpar();

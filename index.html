@@ -2,69 +2,82 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Challenge Oracle ONE + Alura</title>
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <title>Challenge Oracle ONE + Alura - Decodificador</title>
   <link rel="stylesheet" href="./style/reset.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style/areatexto/areatexto-entrada.css">
+  <link rel="stylesheet" href="./style/aviso.css">
+  <link rel="stylesheet" href="./style/base.css">
+  <link rel="stylesheet" href="./style/botao/botao.css">
+  <link rel="stylesheet" href="./style/botao/botao-copiar.css">
+  <link rel="stylesheet" href="./style/botao/botao-cripto.css">
+  <link rel="stylesheet" href="./style/botao/botao-descripto.css">
+  <link rel="stylesheet" href="./style/botoes.css">
+  <link rel="stylesheet" href="./style/cabecalho.css">
+  <link rel="stylesheet" href="./style/conteudo.css">
+  <link rel="stylesheet" href="./style/resultado/resultado.css">
+  <link rel="stylesheet" href="./style/resultado/resultado-imagem.css">
+  <link rel="stylesheet" href="./style/resultado/resultado-texto.css">
+  <link rel="stylesheet" href="./style/imagemfundo.css">
+  <link rel="stylesheet" href="./style/rodape.css">
+
   <link rel="stylesheet" href="./style/style.css">
 </head>
-<body>
+<body class="base">
+
+  <header class="cabecalho">
+    <img class="cabecalho__logo" src="./images/logo-alura.svg" alt="Logo da Alura"/>
+  </header>
+  
   <main class="conteudo">
-
-    <div class="cabecalho divisoes">
-      <div id="logo">
-        <img src="./images/logo-alura.svg" alt="Logo da Alura" />
+    <div class="entrada">
+      <textarea class="areatexto__entrada" data-areatexto-entrada name="areatexto-entrada" placeholder="Digite seu texto"></textarea>
+      <div class="aviso">
+        <img class="aviso__logo aviso__espaçamento" src="./images/logo-aviso.svg" alt="Logo de aviso">
+        <p class="aviso__texto">Apenas letras minúsculas e sem acento.</p>
+      </div>
+      <div class="botoes">
+        <button class="botao botao__encriptar" data-botao-cripto>Criptografia</button>
+        <button class="botao botao__desencriptar" data-botao-descripto>Descriptografia</button>
       </div>
     </div>
-
-    <div class="bloco-esquerdo divisoes">
-      <textarea class="entrada-texto" name="entrada-texto" id="entrada-texto" placeholder="Digite seu texto aqui..." cols="30" rows="10"></textarea>
-
-      <div>
-        <div class="caixa-aviso">
-          <img class="aviso-logo" src="./images/logo-aviso.svg" alt="Logo de aviso">
-          <p class="aviso-texto">Apenas letras minúsculas e sem acento</p>
-        </div>
-
-        <div class="caixa-botoes">
-          <button class="botao-cript" data-botao-cripto>Criptografia</button>
-          <button class="botao-descript" data-botao-descripto>Descriptografia</button>
-        </div>
-
-      </div>
-
-    </div>
-
-    <div class="bloco-direito divisoes">
-      <div class="retangulo">
-        <div id="com-imagem">
-          <img class="logo-nao-encontrado" src="./images/logo-nao-encontrado.svg" alt="Jovem com um lupa na mão procurando algo">
-          <div class="caixa-alerta">
-            <p class="nota">Nenhuma mensagem encontrada</p>
-            <p class="descricao">Digite um texto que você deseja criptografar ou descriptografar</p>
-          </div>
-        </div>
-
-        <div id="com-texto">
-          <textarea class="saida-texto" name="saida-texto" id="saida-texto" cols="30" rows="10" readonly></textarea>
-          <button class="botao-copiar" data-botao-copiar>Copiar</button>
+    <div class="resultado">
+      <div class="resultado__imagem">
+        <img class="resultado__imagem__fundo" src="./images/logo-nao-encontrado.svg" alt="Jovem com um lupa na mão procurando algo">
+        <div class="resultado__imagem__alerta">
+          <p class="resultado__imagem__nota">Nenhuma mensagem encontrada</p>
+          <p class="resultado__imagem__descricao">Digite um texto que você deseja criptografar ou descriptografar</p>
         </div>
       </div>
-    </div>
 
+      <div class="resultado__texto">
+        <textarea class="resultado__texto__saida" data-areatexto-saida readonly></textarea>
+        <button class="botao botao-copiar" data-botao-copiar>Copiar</button>
+      </div>
+    </div>
   </main>
+
   <footer class="rodape">
     <ul>
       <li>
         <a href="https://www.linkedin.com/in/charles-gabriel-leandro-do-carmo-617b0078/">
-          <img src="./images/icons8-linkedin.svg" alt="Ícone do LinkedIn">
+          <img class="rodape__logo" src="./images/icons8-linkedin.png" alt="Ícone do LinkedIn">
         </a>
       </li>
       <li>
         <a href="https://github.com/charlesgabriel/">
-          <img src="./images/icons8-github.svg" alt="Ícone do GitHub">
+          <img class="rodape__logo" src="./images/icons8-github.png" alt="Ícone do GitHub">
         </a>
       </li>
       <li>
-        Charles Gabriel L Carmo - 2022 &copy;
+        <p class="rodape__autor">
+          Charles Gabriel L Carmo - 2022 &copy;
+        </p>
       </li>
     </ul>
   </footer>

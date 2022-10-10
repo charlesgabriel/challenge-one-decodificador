@@ -1,0 +1,9 @@
+.botao__desencriptar {
+  background: var(--lignt-blue-100);
+  border: 1px solid var(--dark-blue-300);
+  color: var(--dark-blue-300);
+}
+
+.botao__desencriptar:hover {
+  background: var(--lignt-blue-300);
+}

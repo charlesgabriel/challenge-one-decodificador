@@ -1,0 +1,14 @@
+.botoes > button:nth-child(1) {
+    margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botoes > button:nth-child(1) {
+        margin-bottom: 0;
+        margin-right: 1.5rem;
+    }
+}

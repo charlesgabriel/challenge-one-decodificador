@@ -1,0 +1,24 @@
+.areatexto__entrada {
+  background: var(--lignt-blue-100);
+  border: none;
+  color: var(--dark-blue-300);
+  font-size: 2rem;
+  min-height: 43vh;
+  outline: none;
+  padding: 2px;
+  resize: none;
+  width: 100%;
+}
+
+.areatexto__entrada::placeholder {
+  color: var(--dark-blue-300);
+  font-size: 2rem;
+  padding-top: 6rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .areatexto__entrada {
+    min-height: 76vh;
+    min-width: 42.5rem;
+  }  
+}

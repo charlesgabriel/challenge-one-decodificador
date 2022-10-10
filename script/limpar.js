@@ -1,9 +1,11 @@
-import { $ } from './buscarPorId.js';
-import { mostrarImagem } from './campoimagem.js';
+import { $ } from './buscaSeletor.js';
+import { esconderElemento } from './campoImagem.js';
+import { textoEntrada } from './textoEntrada.js';
+import { textoSaida } from './textoSaida.js';
 
 export function limpar() {
-    $('saida-texto').innerHTML = "";
-    $('entrada-texto').value = "";
-    $('entrada-texto').focus();
-    mostrarImagem();
+    $(textoSaida).innerHTML = "";
+    $(textoEntrada).value = "";
+    $(textoEntrada).focus();
+    esconderElemento();
 }

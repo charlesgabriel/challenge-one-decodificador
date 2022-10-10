@@ -1,0 +1,25 @@
+.resultado__imagem__nota {
+  color: var(--gray-500);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 120%;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.resultado__imagem__descricao {
+  color: var(--gray-400);
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+}
+
+.resultado__imagem__fundo {
+  display: none;
+}
+
+@media screen and (min-width: 1440px) {
+  .resultado__imagem__fundo {
+    display: block;
+  }
+}

@@ -1,0 +1,10 @@
+.resultado__texto__saida {
+  border: none;
+  color: var(--gray-400);
+  font-size: 1.5rem;
+  outline: none;
+  height: auto;
+  min-height: 43vh;
+  resize: none;
+  width: 98%;
+}

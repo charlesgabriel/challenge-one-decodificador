@@ -1,0 +1,1 @@
+export const textoSaida = '[data-areatexto-saida]';

@@ -1,0 +1,9 @@
+.botao__encriptar {
+  background: var(--dark-blue-300);
+  border: none;
+  color: var(--white);
+}
+
+.botao__encriptar:hover {
+  background: var(--dark-blue-400);
+}

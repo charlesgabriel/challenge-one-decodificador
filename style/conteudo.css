@@ -1,0 +1,16 @@
+.conteudo {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .conteudo {
+        padding: 2.5rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .conteudo {
+        display: flex;
+        flex: 1;
+    }
+}
