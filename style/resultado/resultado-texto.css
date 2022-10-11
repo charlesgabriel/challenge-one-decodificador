@@ -8,3 +8,17 @@
   resize: none;
   width: 98%;
 }
+
+@media screen and (min-width: 1440px) {
+  .resultado__texto {
+    align-content: space-between;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .resultado__texto__saida {
+    height: 92%;
+  }
+}
